@@ -28,7 +28,7 @@ namespace Quiron.LojaVirtual.Web.HtmlHelpers
                 if (i == paginacao.PaginaAtual)
                 {
                     tag.AddCssClass("selected");
-                    tag.AddCssClass("btn-primary");
+                    tag.AddCssClass("btn btn-success");
                 }
                 else
                     tag.AddCssClass("btn btn-default");
