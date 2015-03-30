@@ -31,12 +31,10 @@ namespace Quiron.LojaVirtual.Web.Controllers
 
             };
 
-
             model.Paginacao = new Paginacao{
                                             ItensPorPagina = ProdutosPorPagina,
                                             ItensTotal = model.Produtos.Count(),
-                                            PaginaAtual = pagina
-                                        };
+                                            PaginaAtual = pagina};
 
             return View(model);
         }
