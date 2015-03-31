@@ -26,15 +26,18 @@ namespace Quiron.LojaVirtual.Web.Controllers
                         .Skip((pagina - 1) * ProdutosPorPagina)
                         .Take(ProdutosPorPagina),
 
+                Paginacao = new Paginacao
+                {
+                    ItensPorPagina = ProdutosPorPagina,
+                    ItensTotal = repositorio.Produtos.Where(p => categoria == null || p.Categoria == categoria).Count(),
+                    PaginaAtual = pagina
+                },
 
                 CategoriaAtual = categoria
 
             };
 
-            model.Paginacao = new Paginacao{
-                                            ItensPorPagina = ProdutosPorPagina,
-                                            ItensTotal = model.Produtos.Count(),
-                                            PaginaAtual = pagina};
+
 
             return View(model);
         }

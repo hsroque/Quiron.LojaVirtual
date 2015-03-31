@@ -20,6 +20,11 @@ namespace Quiron.LojaVirtual.Web
             routes.MapRoute(null, "{categoria}", new { controller = "Vitrine", action = "ListaProdutos" , pagina = 1});
             
             routes.MapRoute(null, "{categoria}/Pagina{pagina}", new { controller = "Vitrine", action = "ListaProdutos"}, new {pagina = @"\d+" });
+
+            routes.MapRoute(null, "{controller}/{action}");
+
+
+   
         }
     }
 }
