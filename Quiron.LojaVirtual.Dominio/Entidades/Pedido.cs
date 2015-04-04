@@ -9,7 +9,6 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
 {
     public class Pedido
     {
-        //PedidoId
         [Key]
         public int PedidoId { get; set; }
 
