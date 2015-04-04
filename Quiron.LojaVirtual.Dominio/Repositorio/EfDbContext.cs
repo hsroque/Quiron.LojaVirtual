@@ -19,5 +19,7 @@ namespace Quiron.LojaVirtual.Dominio.Repositorio
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Produto>().ToTable("Produtos");
         }
+
+        public System.Data.Entity.DbSet<Quiron.LojaVirtual.Dominio.Entidades.Pedido> Pedidoes { get; set; }
     }
 }
