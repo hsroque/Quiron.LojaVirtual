@@ -49,3 +49,30 @@
 
 
 }
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<script>
+
+    $('#Cep').change(function (e) {
+
+        e.preventDefault();
+
+        $('#Endereco').val('');
+        $('#Cidade').val('');
+        $('#Bairro').val('');
+        $('#Estado').val('');
+
+        var cep = $('#Cep').val().replace("-", "");
+
+        $.getJSON('http://cep.republicavirtual.com.br/web_cep.php?cep=' + cep + '&formato=json', {},
+            function (data) {
+
+                if (data.resultado == "1") {
+                    $('#Endereco').val(data.tipo_lograCdouro + ' ' + data.logradouro);
+                    $('#Cidade').val(data.cidade);
+                    $('#Bairro').val(data.bairro);
+                    $('#Estado').val(data.uf);
+                }
+            });
+    });
+</script>
