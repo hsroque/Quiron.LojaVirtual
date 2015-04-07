@@ -20,6 +20,7 @@
     <div class="form-group">
         <label>Nome</label>
         @Html.TextBoxFor(x => x.Nome, new { @class = "form-control" })
+        @Html.ValidationMessageFor(x => x.Nome)
     </div>
 
     <h3>Dados para entrega</h3>
