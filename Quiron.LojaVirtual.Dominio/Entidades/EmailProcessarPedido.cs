@@ -4,12 +4,12 @@ using System.Linq;
 using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
-using System.Net.NetworkCredential;
 namespace Quiron.LojaVirtual.Dominio.Entidades
 {
 
     public class EmailPedido
     {
+
         private readonly EmailConfiguracoes _emailconfiguracoes;
 
         public EmailPedido(EmailConfiguracoes emailconfiguracoes)
